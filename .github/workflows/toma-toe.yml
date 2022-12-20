@@ -7,14 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile infrastructure
-        uses: Azure/cli@1.0.4
+        uses: Azure/cli@v1
         with:
-          azcliversion: 2.23.0
+          azcliversion: 2.29.2
           inlineScript: az bicep build --file ./deployment/main.bicep
       - name: Compile infrastructure
         uses: Azure/cli@1.0.4
         with:
-          azcliversion: 2.23.0
+          azcliversion: 2.29.2
           inlineScript: az bicep build --file ./deployment/trafficmgr.bicep
       - name: Publish Artifact
         uses: actions/upload-artifact@v2
