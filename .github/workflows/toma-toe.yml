@@ -24,7 +24,7 @@ jobs:
 
   infrastructure-incremental-test:
     needs: publish-bicep
-    uses: tmarcis1/github-actions-start/.github/workflows/deployment.yml@497c42638375bd0b63059c5d6ab48cff5eb5cef5
+    uses: tmarcis1/github-actions-start/.github/workflows/deployment.yml@8ad5a476a741b517e8e8ae599e21e26c44a8c95b
     with:
       environment: test
     secrets:
@@ -32,7 +32,7 @@ jobs:
 
   infrastructure-incremental-prod:
     needs: infrastructure-incremental-test
-    uses: tmarcis1/github-actions-start/.github/workflows/deployment.yml@497c42638375bd0b63059c5d6ab48cff5eb5cef5
+    uses: tmarcis1/github-actions-start/.github/workflows/deployment.yml@8ad5a476a741b517e8e8ae599e21e26c44a8c95b
     with:
       environment: prod
     secrets:
