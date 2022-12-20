@@ -9,12 +9,12 @@ jobs:
       - name: Compile infrastructure
         uses: Azure/cli@v1
         with:
-          azcliversion: 2.29.2
+          azcliversion: latest
           inlineScript: az bicep build --file ./deployment/main.bicep
       - name: Compile infrastructure
         uses: Azure/cli@1.0.4
         with:
-          azcliversion: 2.29.2
+          azcliversion: latest
           inlineScript: az bicep build --file ./deployment/trafficmgr.bicep
       - name: Publish Artifact
         uses: actions/upload-artifact@v2
