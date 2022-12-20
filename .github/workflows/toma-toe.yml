@@ -1,5 +1,5 @@
 name: Toma Toe Workflow
-#on: [push]
+on: [push]
 
 jobs:
   publish-bicep:
