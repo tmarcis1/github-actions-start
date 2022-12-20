@@ -42,4 +42,4 @@ jobs:
         uses: Azure/cli@v1
         with:
           azcliversion: latest
-          run: az deployment sub create --location westeurope --template-file ./infrastructure/trafficmgr.json --parameters ./infrastructure/${{ inputs.environment }}.parameters.json
+          inlineScript: az deployment sub create --location westeurope --template-file ./infrastructure/trafficmgr.json --parameters ./infrastructure/${{ inputs.environment }}.parameters.json
